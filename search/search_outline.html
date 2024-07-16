@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <title>초이스스탁</title>
+    <meta name="robots" content="데이터히어로 미국주식">
+    <meta name="description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C295D">
+    <!-- 오픈 그래프 -->
+    <meta property="og:title" content="데이터히어로 미국주식" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="투자를 쉽고 편리하게, 미국주식가이드, 종목분석, 종목토론, 데이터히어로">
+    <meta property="og:image" content="http://godlife.ivyro.net/test/img/choicestockus_thumb.png">
+    <meta property="og:image:width" content="410" />
+    <meta property="og:image:height" content="210" />
+    <meta property="og:url" content="http://us.itooza.com">
+    <!-- 검색엔진 SEO 최적화 -->
+    <!-- https://www.choicestock.co.kr/search/summary 검색결과 대표 표준 페이지로 지정 -->
+    <link rel="canonical" href="https://www.choicestock.co.kr/search/summary" />
+    <!-- jquery-1.12 -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- highstock -->    
+    <script src="../node_modules/highcharts/highstock.js"></script>
+    <script src="../node_modules/highcharts/highcharts-more.js"></script>
+    <script src="../node_modules/highcharts/modules/data.js"></script>
+    <script src="../node_modules/highcharts/modules/hollowcandlestick.js"></script>
+    <script src="../node_modules/highcharts/modules/no-data-to-display.js"></script>
+    <script src="../node_modules/highcharts/modules/treemap.js"></script>    
+    <script src="../node_modules/highcharts/modules/exporting.js"></script>
+    <script src="../node_modules/highcharts/modules/export-data.js"></script>
+    <script src="../node_modules/highcharts/modules/accessibility.js"></script>
+    <script src="../js/chartjs.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/globalstock.css?v3" />
+    <link rel="stylesheet" type="text/css" href="../css/hans_globalstock.css?v3" />
+    <!-- js -->
+    <script src="../js/globalstock.js"></script>
+</head>
+<body class="globalStock kiwoom">
+    <div id="wrap">        
+
+        <!-- 종목검색 class = sub_search-->
+        <div id="container" class="sub_search gnb_hide">
+            <!-- 주요 콘텐츠 -->            
+            <div class="sub_mid adequateArea">
+                <h2 class="title">지금 살까?</h2>
+                <div class="listWrap">
+                    <div class="list">
+                        <!-- 벨류 점수 -->
+                        <div class="mid">
+                            <div class="charm_num">
+                                <span class="signal buy">매수</span>
+                                <!-- <span class="signal sell">매도</span>
+                                <span class="signal hold">보유</span>
+                                <span class="signal waitting">관망</span> -->
+                                <!-- 매수 : signal buy,  매도 : signal sell, 보유 hold, 관망 waitting  -->
+                                <span class="txt_guide"><img src="../img/txt_guide.svg" alt="가이드보기"></span>
+                                <div class="guide_box">
+                                    <span class="clse">닫기</span>                          
+                                    <p class="txt"><strong>지금 살까?</strong></p>
+                                    <p class="txt">10년 이상의 금융 빅데이터와 알고리즘 기술을 통해 종목의 매매신호를 신속하게 제시합니다.</p>
+                                    <p class="txt">매매신호는 종목진단 / 밸류에이션 / 수급분석 을 종합적으로 고려해 결정합니다.</p>
+                                    <p class="txt">매매신호는 매수-보유-매도-관망 신호를 제공하며, 3개 조건을 모두 만족 할 때 매수 및 보유신호가 발생합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //charm_num -->
+                            <div class="num_bar">
+                                <div class="line">
+                                    <div class="th">스마트 스코어</div>
+                                    <div class="barArea">
+                                        <div class="score-container">
+                                            <div class="score-bar">
+                                                <div class="score-dot" style="left:80%"></div>
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                    <!-- //barArea -->                                    
+                                </div>
+                                <div class="line">
+                                    <div class="th">밸류에이션</div>
+                                    <div class="barArea">
+                                        <div class="score-container">
+                                            <div class="score-bar">
+                                                <div class="score-dot" style="left:40%"></div>
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                    <!-- //barArea -->
+                                </div>
+                                <div class="line">
+                                    <div class="th">수급분석</div>
+                                    <div class="barArea">
+                                        <div class="score-container">
+                                            <div class="score-bar">
+                                                <div class="score-dot" style="left:20%"></div>
+                                            </div>                                    
+                                        </div>
+                                    </div>
+                                    <!-- //barArea -->                                    
+                                </div>
+                                <!-- //line -->
+                            </div>
+                            <!-- //num_bar -->
+                        </div>
+                        <!-- //mid -->
+                    </div>
+                    <!-- //list -->
+                    <div class="latest_signal">
+                        <p class="date">최근 매수신호 : <b>254</b>.24</p>
+                        <p class="num">(23. 3/26)</p>
+                    </div>                    
+                </div>
+                <!-- //listWrap -->                
+            </div>
+            <div class="table_btmarea">
+                <a href="" class="more">오늘의 매매신호 종목만 쏙쏙!<i></i></a>
+            </div>                
+            
+            <div class="sub_mid adequateArea">
+                <h2 class="title">지금 살까?</h2>
+                <div class="listWrap">
+                    <div class="list">
+                        <!-- 벨류 점수 -->
+                        <div class="mid">
+                            <div class="charm_num">
+                                <span class="signal lock">?</span>                                
+                                <!-- 숨김 signal lock -->                                
+                            </div>
+                            <!-- //charm_num -->
+                            <div class="num_bar">
+                                <!-- 비 로그인 -->
+                                <div class="freeInfo_box">
+                                    <p>지금 회원가입하면 매일 매매신호 3건 무료! <a href="">프리미엄</a></p>                    
+                                </div> 
+                                <!-- 무료회원 > 3건 초과 시 -->
+                                <div class="freeInfo_box">
+                                    <p>투자는 타이밍! 매매신호가 무제한~ <a href="">프리미엄</a></p>                    
+                                </div>                                
+                            </div>
+                            <!-- //num_bar -->
+                        </div>
+                        <!-- //mid -->
+                    </div>
+                    <!-- //list -->
+                    <div class="latest_signal">
+                        <p class="date">최근 매수신호 : <b>254</b>.24</p>
+                        <p class="num">(23. 3/26)</p>
+                    </div>                    
+                </div>
+                <!-- //listWrap -->
+            </div>
+
+            <div class="sub_mid adequateArea">
+                <h2 class="title">지금 살까?</h2>
+                <div class="listWrap">
+                    <div class="list">
+                        <!-- 벨류 점수 -->
+                        <div class="mid">
+                            <div class="charm_num">
+                                <span class="signal lock">?</span>                                
+                                <!-- 숨김 signal lock -->                                
+                            </div>
+                            <!-- //charm_num -->
+                            <div class="num_bar">                                
+                                <!-- 무료회원 > 3건 초과 시 -->
+                                <div class="freeInfo_box">
+                                    <p>투자는 타이밍! 매매신호가 무제한~ <a href="../payment/step01.html">프리미엄</a></p>                    
+                                </div> 
+                            </div>
+                            <!-- //num_bar -->
+                        </div>
+                        <!-- //mid -->
+                    </div>
+                    <!-- //list -->
+                    <div class="latest_signal">
+                        <p class="date">최근 매수신호 : <b>254</b>.24</p>
+                        <p class="num">(23. 3/26)</p>
+                    </div>                    
+                </div>
+                <!-- //listWrap -->
+            </div>
+
+            <div class="sub_mid outline_box">
+                <a href="search_diagnosis.html" class="box">
+                    <p class="title"><span>스마트 스코어</span></p>
+                    <div class="con">
+                        <div class="charmNum_box">
+                            <strong class="charm_num">88</strong>
+                            <p class="charm_average">업종평균 <b>54</b></p>
+                        </div>
+                        <!-- //charmNum_box -->
+                        <p class="charm_ranking">전체상위 <span>0.45%</span></p>
+                    </div>
+                </a>
+
+                <a href="/search/fairvalue/CHPT" class="box">
+                    <p class="title"><span>밸류에이션</span></p>
+                    <div class="con">
+                        <div class="value_chart">
+                            <div class="no_data">밸류에이션 데이터부족</div>
+                            <div class="line">
+                                <span class="g_action" style="left: 50%;"></span>
+                            </div>
+                            <div class="adequate">
+                                <span>적정가</span>
+                                <span class="remark">
+                                    <div class="txt_filter size_B"><i></i><i></i><i></i><i></i></div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" data-modal="modal-3" class="btn_free md-trigger box">
+                    <p class="title"><span>밸류에이션</span></p>
+                    <div class="con">
+                        <div class="value_chart">
+                            <div class="prm_lock"><span><i></i>2주 무료보기</span></div>
+                            <div class="line">
+                                <span class="g_action" style="left: 50%;"></span>
+                            </div>
+                            <div class="adequate">
+                                <span>적정가</span>
+                                <span class="remark">
+                                    <div class="txt_filter size_B"><i></i><i></i><i></i><i></i></div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>                
+                <a href="" class="box">
+                    <p class="title"><span>밸류에이션</span></p>
+                    <div class="con">
+                        <div class="value_chart">
+                            <div class="line">   
+                                <!-- 0 미만인 경우 클래스 under 추가 -->                                
+                                <div class="situation under" style="left: -10px;">
+                                    <span>현재가</span>                                    
+                                </div>
+                                <!-- <div class="situation" style="left: 0;">
+                                    <span>현재가</span>                                    
+                                </div> -->
+                                <div class="situation" style="left: 50%;">
+                                    <span>현재가</span>                                    
+                                </div>
+                                <!-- <div class="situation" style="left: 100%;">
+                                    <span>현재가</span>                                    
+                                </div> -->
+                                <!-- 100% 벗어난 경우 클래스 over 추가 -->
+                                <div class="situation over" style="right: -10px">
+                                    <span>현재가</span>
+                                </div>
+                                <span class="g_action" style="left: 50%;"></span>
+                            </div>
+                            <div class="adequate">
+                                <span>적정가</span>
+                                <strong>108.<b>88</b></strong>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="" class="box">
+                    <p class="title"><span>투자지표</span></p>
+                    <div class="con">
+                        <div class="data_attainment">
+                            <ul>
+                                <li>PER(배)
+                                    <span>8,887<b>.80</b></span>
+                                </li>
+                                <li>PSR(배)
+                                    <span>27<b>.80</b></span>
+                                </li>
+                                <li>ROE(%)
+                                    <span>27<b>.20</b></span>
+                                </li>
+                                <li>DY(%)
+                                    <span>27<b>.50</b></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a href="" class="box">
+                    <div class="attention_box">
+                        <p class="title">주가추세</p>
+                        <div class="con">
+                            <div class="game_tip">
+                                <!-- trans up : 강세, trans down : 약세, trans : 중립, 없는 경우 N/A -->
+                                <ul>
+                                    <li><i class="trans_icn up"></i><span>단기</span></li>
+                                    <li><i class="trans_icn down"></i><span>중기</span></li>
+                                    <li><i class="trans_icn trans"></i><span>장기</span></li>
+                                </ul>
+                            </div>
+                            <!-- //game_tip -->
+
+                            <p class="charm_ranking">최근 1개월 <span class="increase"> +23.5%</span></p>
+                            <!-- <p class="charm_ranking">최근 1개월 <span class="decrease"> +23.5%</span></p> -->
+                        </div>
+                    </div>
+                </a>
+
+                <div class="box">
+                    <p class="title"><a href="../stock/recipe.html">투자레시피</a></p>
+                    <div class="con">
+                        <div class="event_attractiveness">
+                            <ul>
+                                <li class="att">레시피 항목 없음 😕</li>                                
+                                <li class="att_on"><a href="">이익성장주</a></li>
+                                <li class="att_on"><a href="">소비자독점주</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="box">
+                    <p class="title"><span>경쟁사</span></p>
+                    <div class="con">
+                        <div class="competitors">
+                            <span class="list">EntertainmentEntertainment</span>
+                            <ul>
+                                <li><span>컴캐스트</span></li>
+                                <li><span>차터커뮤니케이션차터커뮤니케이션차터커뮤니케이션</span></li>
+                                <li><span>비아컴</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- //outline_box -->
+
+            <div class="sub_mid outline_investCharm">
+                <div id="containersummary1" class="containersummary1"></div>
+
+                <div class="summary small">
+                    <!-- div 사이즈는 big, small  -->
+                    <div class="view_box">
+                        <p>글로벌 웨이퍼 제조 장비 제조사로, 집적회로(IC) 제작에 쓰이는 반도체 가공 시스템을 개발합니다. <br>
+                            본 회사의 제품은 실리콘 웨이퍼에 특수 필름을 넣고 다양한 필름을 에칭하여 회로 디자인을 만드는데 사용 됩니다. <br>
+                            미국, 유럽, 중국, 일본, 한국, 대만 등의 휴대폰, 태블릿, 컴퓨터, 저장 장치, 네트워킹 장비 제조업체에게 제품을 판매합니다.</p>
+                        <ul class="etc">
+                            <li class="industry"> <span>산업</span>Semiconductor Equipment &amp; Materials</li>
+                            <li class="home"><span>홈</span><a href="http://www.lamresearch.com"
+                                    target="_blank">www.lamresearch.com</a></li>
+                            <li class="link"><span>sec전자공시</span> <a
+                                    href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0000707549"
+                                    target="_blank">바로가기</a></li>
+                        </ul>
+                    </div>
+                    <!-- //view_box -->
+                </div>
+
+                <div class="table_box">
+                    <strong class="unit">* 기준 : 20.04/09</strong>
+                    <div>
+                        <table cellspacing="0" border="1" class="tableRanking left guide_table">
+                            <tbody>
+                                <tr>
+                                    <th scope="col" class="th_guide txt01"><span>시가총액</span></th>
+                                    <td>1,191,564<span class="unit">백만달러</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt01"><span>기업가치 EV</span></th>
+                                    <td>1,218,677<span class="unit">백만달러</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt01"><span>주식수</span></th>
+                                    <td>5572<span class="unit">주</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt01"><span>주당배당금</span></th>
+                                    <td>1287<span class="unit">달러</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt01"><span>배당수익률</span></th>
+                                    <td>88.888<span class="unit">%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 테이블 안내 툴팁 -->
+                        <div class="th_guide_hide txt01 sum">
+                            <div class="guide_box">
+                                <ul>
+                                    <li>기본주식수x전일 종가</li>
+                                </ul>
+                            </div><!-- 시가총액 -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>전일 시가총액+차입금-현금및현금성자산</li>
+                                </ul>
+                            </div><!-- 기업가치 EV -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>가중평균희석주식수(미발표 기업은 가중평균주식수)</li>
+                                </ul>
+                            </div><!-- 주식수 -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>최근년도 주당배당금</li>
+                                </ul>
+                            </div><!-- 주당배당금 -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>최근년도 주당배당금/기말 주가</li>
+                                </ul>
+                            </div><!-- 배당수익률 -->
+                        </div>
+                        <!-- //th_guide_hide -->
+                        <table cellspacing="0" border="1" class="tableRanking right guide_table">
+                            <tbody>
+                                <tr>
+                                    <th scope="col" class="th_guide txt02"><span>주가수익배수 PER</span></th>
+                                    <td>8,888<span class="unit">배</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt02"><span>주가순자산배수 PBR</span></th>
+                                    <td>888</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt02"><span>자기자본이익률 ROE</span></th>
+                                    <td>19.24<span class="unit">%</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt02"><span>주당순이익 EPS</span></th>
+                                    <td>888<span class="unit">달러</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col" class="th_guide txt02"><span>주당순자산 BPS</span></th>
+                                    <td>8.888<span class="unit">달러</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- 테이블 안내 툴팁 -->
+                        <div class="th_guide_hide txt02 sum">
+                            <div class="guide_box">
+                                <ul>
+                                    <li>전일 시가총액/최근 4분기 합산 보통주순이익</li>
+                                </ul>
+                            </div><!-- 주가수익배수 PER -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>전일 시가총액/최근 분기 자본총계</li>
+                                </ul>
+                            </div><!-- 주가순자산배수 PBR -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>최근 4분기 합산 보통주순이익/최근 4분기 평균자본</li>
+                                </ul>
+                            </div><!-- 자기자본이익률 ROE -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>보통주순이익/가중평균희석주식수</li>
+                                </ul>
+                            </div><!-- 주당순이익 EPS -->
+                            <div class="guide_box">
+                                <ul>
+                                    <li>자본총계/가중평균주식수</li>
+                                </ul>
+                            </div><!-- 주당순자산 BPS -->
+                        </div>
+                        <!-- //th_guide_hide -->
+
+                    </div>
+
+                </div>
+                <!-- //table_box -->
+            </div>
+            <!-- //investCharm_area -->
+
+            <!-- 구글 에드센스 추천포트폴리오 하단 -->
+            <!-- 사각형(new) -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6864430327621783" data-ad-slot="3945317009"
+                data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <!-- //구글 에드센스 -->
+
+            <div class="sub_mid financials_chart">
+                <div class="bdr_title">
+                    <h4 class="title">재무제표</h4>
+                    <div class="tabs_menu">
+                        <span class="active">연간</span>
+                        <span>분기</span>
+                        <strong class="unit">* 기준 : 백만달러(USD)</strong>
+                    </div>
+                    <!-- //tabs_menu -->
+                </div>
+
+                <div class="tableetabs_wrap">
+
+                    <!-- 재무제표 > 연간 -->
+                    <div class="tabletabs_content tabs_01">
+                        <div class="chart_box">
+                            <div id="containerfinancials1_1" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                        <div class="chart_box">
+                            <div id="containerfinancials1_2" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                        <div class="chart_box">
+                            <div id="containerfinancials1_3" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //tabletabs_content -->
+
+                    <!-- 재무제표 > 분기 -->
+                    <div class="tabletabs_content tabs_02">
+                        <div class="chart_box">
+                            <div id="containerfinancials2_1" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                        <div class="chart_box">
+                            <div id="containerfinancials2_2" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                        <div class="chart_box">
+                            <div id="containerfinancials2_3" class="containerfinancials1"></div>
+                            <ul class="chart_legend">
+                                <li><span><i></i>매출액</span></li>
+                                <li><span><i></i>영업이익</span></li>
+                                <li><span><i></i>순이익</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- //tabletabs_wrap -->
+
+                <div class="cho_applybtn">
+                    <a href="javascript:fnSinChung();" class="btn btn_apply">초이스스탁US 신청하기<i></i></a>
+                </div>
+                
+            </div>
+            <!-- //sub_mid -->
+        </div>
+        <!-- //container -->
+
+        <div id="footer">
+            <div class="notice">
+                <div class="foot_info">
+                    <div class="service_info">
+                        <p>본 서비스는 투자판단에 참고용으로만 사용하실 수 있으며, 모든 투자판단은 투자자 본인의 책임으로 당사는 그 결과에 대해 법적인 일체의 책임을 지지 않습니다.</p>
+                        <span class="f_logo"><img src="/img/f_logo_dh.png" alt="데이터히어로"> </span>
+                        <p class="dataLink">data from Quandl and Sharadar
+                        </p>
+                    </div>
+                </div>
+                <!-- //foot_info -->
+            </div>
+            <!-- //notice -->
+        </div>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrap -->
+
+</body>

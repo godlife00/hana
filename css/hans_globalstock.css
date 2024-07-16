@@ -1,0 +1,36 @@
+/*  하나증권 개요 화면에만 적용되는 스타일 */
+:root {
+    --col08be9e: #08be9e; /* 버튼 bg */
+    --col05be9e1a: #05be9e1a; /* 반투명 버튼 bg */
+    --col05be9e: #05be9e;
+    --col04be9e: #04be9e;     
+}
+
+.freeInfo_box a {
+    background-color: var(--col08be9e);
+    letter-spacing: normal;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data {
+    background-color: var(--col05be9e1a);
+    color: var(--col05be9e);
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock span {
+    background-color: var(--col08be9e);
+    color: #fff;
+}
+.globalStock .cho_applybtn .btn.btn_apply {
+    background-color: var(--col08be9e);
+    color: #fff;
+}
+.globalStock .cho_applybtn .btn.btn_apply i {
+    background-image: none;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .charm_ranking span {
+    color: var(--col04be9e);
+}
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
+    font-size: 12px;    
+    color: var(--col05be9e);
+}
