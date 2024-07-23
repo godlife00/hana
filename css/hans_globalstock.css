@@ -19,7 +19,7 @@ body, #wrap {
 .freeInfo_box {
     background-color: transparent;
     padding: 0 10px;
-    text-align: left;
+    text-align: center;
 
 }
 .freeInfo_box p {
@@ -31,14 +31,20 @@ body, #wrap {
     background-color: var(--col08be9e);
     letter-spacing: normal;
     text-align: center;
-    margin: 5px 0 0;
+    margin: 7px auto 0;
     padding: 10px 10px;
     border-radius: 8px;
     width: 130px;
     box-sizing: border-box;
 }
 .globalStock.kiwoom #footer .notice .service_info {
+    background-color: #f9f9f9;
     padding-bottom: 28px;
+}
+#footer .notice .service_info p {
+    font-size: 11px;    
+    line-height: 1.55;    
+    color: #999;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data {
@@ -64,58 +70,49 @@ body, #wrap {
     font-size: 12px;    
     color: var(--col05be9e);
 }
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action,
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data+.line .g_action,
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock+.line .g_action {
-    background-color: transparent;
-}
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action {
-    width: 10px;    
+    top: -3px;
+    width: 10px;
     height: 10px;
-
-
+    background-color: #fff;        
 }
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action::after {    
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: transparent;
-    border-radius: 0;
-    width: 0;
-    height: 0;
-    border-left: 7px solid transparent;  /* 삼각형의 너비를 조정합니다 */
-    border-right: 7px solid transparent; /* 삼각형의 너비를 조정합니다 */
-    border-top: 10px solid var(--col08be9e);
-    border-radius: 5px;
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action::after {
+    width: 6px;
+    height: 6px;
+    background-color: #485777;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
+    top: -29px;    
 }
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {    
-    background-color: transparent;
+    width: 14px;    
+    height: 10px;
     border-radius: 0;
-    width: 0;
-    height: 0;
-    border-left: 6.5px solid transparent;  /* 삼각형의 너비를 조정합니다 */
-    border-right: 6.5px solid transparent; /* 삼각형의 너비를 조정합니다 */
-    border-top: 10px solid var(--col08be9e);
-    border-radius: 5px;
+    background: url('../img/arrow_sct.svg') no-repeat center center;    
 }
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.over {
+    right: 0;
+}
+
 
 /* 지금살까 */
-.globalStock .sub_search .mainBox.attr {
-	position: relative;
+.globalStock .sub_search .adequateArea {
+    position: relative;
 	padding: 0 16px;
-}
-
-.globalStock .sub_search .mainBox.attr .adequateArea {
 	padding-top: 20px;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .title {
+.globalStock .sub_search .adequateArea .title {
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
 	color: #181f29;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid {
+.globalStock .sub_search .adequateArea .listWrap .mid {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -129,18 +126,18 @@ body, #wrap {
 	background-color: #f7f8f9;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num {
 	flex: 1;
 	position: relative;
 }
 
 @media (min-width: 426px) {
-	.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num {
+	.globalStock .sub_search .adequateArea .listWrap .mid .charm_num {
 		flex: 2;
 	}
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal {
 	flex: 1;
 	display: flex;
 	align-items: center;
@@ -159,27 +156,27 @@ body, #wrap {
 	background-color: #fff;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.hold {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.hold {
 	/* 보유 */
 	color: #333;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.buy {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.buy {
 	/* 매수 */
 	color: #E1305A;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.sell {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.sell {
 	/* 매도 */
 	color: #404FC3;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal.waitting {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.waitting {
 	/* 관망 */
 	color: #6A727B;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal_guide {
 	cursor: pointer;
 	position: absolute;
 	right: -5px;
@@ -189,11 +186,11 @@ body, #wrap {
 	border-radius: 50%;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .charm_num .signal_guide img {
+.globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal_guide img {
 	display: block;
 }
 
-.globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar {
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar {
     flex: 2;
     flex-basis: calc(100% - 85px);
     display: flex;
@@ -203,7 +200,7 @@ body, #wrap {
     gap: 5px;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -211,24 +208,68 @@ body, #wrap {
     height: 18px;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .th {
-    color: #333;
-    font-size: 0.75rem;
-    line-height: normal;
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .th {
+    font-size: 13px;    
+    line-height: 1.46;
     text-align: right;
+    color: #888;
     min-width: 76px;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .barArea {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {    
+    /* position: relative;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff; */
+  }
+
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {
+    flex: 2;
     width: 100%;
   }
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline .position {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;    
+    border-radius: 10px;
+    height: 100%;
+    width: 0;    
+    max-width: 100%;
+  }  
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(1) .barArea .barline .position {
+    background-color: #08be9e;
+  }
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .barArea .barline .position {
+    background-color: #485777;
+  }
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .barArea .barline .position {
+    background-color: #d3d3d3;
+  }
+
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td,
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td b {
+    font-size: 13px;
+    font-weight: bold;    
+    line-height: 1.85;        
+    color: #333;    
+  }
+
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .score-container {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-container {
     position: relative;
     width: 100%;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .score-bar {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-bar {
     position: absolute;
     left: 0;
     top: 50%;
@@ -244,7 +285,7 @@ body, #wrap {
       left: 0;
     }
   }
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .score-dot {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot {
     position: absolute;
     left: 0;
     top: 50%;
@@ -262,7 +303,7 @@ body, #wrap {
     animation-timing-function: ease;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line .score-dot::after {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot::after {
     content: "";
     position: absolute;
     left: 2px;
@@ -275,11 +316,11 @@ body, #wrap {
     font-size: 0;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .score-dot {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .score-dot {
     background-color: #1E90FF;
   }
   
-  .globalStock .sub_search .mainBox.attr .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .score-dot {
+  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .score-dot {
     background-color: #00BFFF;
   }
   
@@ -369,6 +410,7 @@ body, #wrap {
     justify-content: space-between;
     gap: 12px 12px;
     margin: 15px 0;    
+    padding: 0 16px;
   }
   .table_btmarea .txt {
     display: flex;
@@ -382,7 +424,7 @@ body, #wrap {
   .table_btmarea .txt::before {
     content: '';
     display: inline-block;
-    background: url('../img/icon_awesome.svg') no-repeat center center;
+    background: url('../img/icon_awesome_new.svg') no-repeat center center;
     width: 14px;
     height: 14px;
   }
@@ -495,7 +537,9 @@ body, #wrap {
 .containersummary1 .highcharts-series-0 .highcharts-graph {
     stroke: var(--col05be9e) !important; 
 }
-.containersummary1 .highcharts-axis-line,
+.containersummary1 .highcharts-axis-line {
+    stroke: #f6f6f6;
+}
 .containersummary1 .highcharts-tick {
     display: none !important;
 }
@@ -503,6 +547,11 @@ body, #wrap {
     color: #888 !important; 
     font-size: 12px !important;
     fill: #888 !important; 
+}
+.containersummary1 .highcharts-tooltip text tspan:nth-child(2), 
+.containersummary1 .highcharts-tooltip text tspan:nth-child(3) {
+    color: var(--col05be9e) !important; 
+    fill: var(--col05be9e) !important; 
 }
 .containerfinancials1 .highcharts-point.highcharts-color-0 {
     fill: #05be9e;
@@ -523,6 +572,10 @@ body, #wrap {
 .containerfinancials1 .highcharts-axis-labels.highcharts-xaxis-labels text {
     color: #888 !important; 
     font-size: 14px !important;
+    fill: #888 !important; 
+}
+.containerfinancials1 .highcharts-tooltip text tspan:nth-child(1) {
+    color: #888 !important;     
     fill: #888 !important; 
 }
 .globalStock .sub_search .sub_mid.financials_chart .chart_box .chart_legend li span {
@@ -597,8 +650,11 @@ body, #wrap {
     border: none;
 }
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table tr {
-    border-top: 1px solid #f6f6f6;
+    /* border-top: 1px solid #f6f6f6; */
     border-bottom: 1px solid #f6f6f6;
+}
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table:first-child tr {
+    border-top: 1px solid #f6f6f6;
 }
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table.left {
     float: none;
@@ -654,4 +710,11 @@ body, #wrap {
 }
 .globalStock .sub_search .sub_mid.financials_chart .bdr_title {
     border-bottom: none;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line {
+    background-color: #fff;
+    height: 4px;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip {
+    padding: 20px 0;
 }
