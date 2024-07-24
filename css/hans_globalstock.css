@@ -451,7 +451,11 @@ body, #wrap {
   }
   .globalStock .sub_search .sub_mid.outline_box .box .con {
     height: auto;
-    min-height: 113px;
+    min-height: 113px;    
+    align-content: flex-start;
+  }
+  .globalStock .sub_search .sub_mid.outline_box .box:not(:has(.event_attractiveness)) .con {                          
+    align-content: normal;
   }
   .globalStock .sub_search .sub_mid.outline_box .box .competitors span.list {
     font-size: 12px;
@@ -463,6 +467,7 @@ body, #wrap {
   .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on {
     background: none;
     font-weight: normal;
+    padding-top: 5px;    
   }
   .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on a {
     font-size: 12px;
