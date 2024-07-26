@@ -1,725 +1,869 @@
-/*  하나증권 개요 화면에만 적용되는 스타일 */ 
+/*  하나증권 개요 화면에만 적용되는 스타일 */
 :root {
-    --col08be9e: #08be9e; /* 버튼 bg */
-    --col05be9e1a: #05be9e1a; /* 반투명 버튼 bg */
-    --colf9f9f9: #f9f9f9; /* 회색 배경 */    
-    --col05be9e: #05be9e;
-    --col04be9e: #04be9e;     
-    
+  --col08be9e: #08be9e;
+  /* 버튼 bg */
+  --col05be9e1a: #05be9e1a;
+  /* 반투명 버튼 bg */
+  --colf9f9f9: #f9f9f9;
+  /* 회색 배경 */
+  --col05be9e: #05be9e;
+  --col04be9e: #04be9e;
+
 }
 
-body, #wrap {    
-    background-color: #fff;
+body,
+#wrap {
+  background-color: #fff;
 }
+
 .globalStock .sub_search .sub_mid.adequateArea,
 .globalStock .sub_search .sub_mid.outline_box .box {
-    background-color: var(--colf9f9f9);    
+  background-color: var(--colf9f9f9);
 }
 
 .freeInfo_box {
-    background-color: transparent;
-    padding: 0 10px;
-    text-align: center;
+  background-color: transparent;
+  padding: 0 10px;
+  text-align: center;
 
 }
+
 .freeInfo_box p {
-    font-size: 13px;    
-    line-height: 1.23;    
-    color: #888;
+  font-size: 13px;
+  line-height: 1.23;
+  color: #888;
 }
+
 .freeInfo_box a {
-    background-color: var(--col08be9e);
-    letter-spacing: normal;
-    text-align: center;
-    margin: 7px auto 0;
-    padding: 10px 10px;
-    border-radius: 8px;
-    width: 130px;
-    box-sizing: border-box;
+  background-color: var(--col08be9e);
+  letter-spacing: normal;
+  text-align: center;
+  margin: 7px auto 0;
+  padding: 10px 10px;
+  border-radius: 8px;
+  width: 130px;
+  box-sizing: border-box;
 }
+
 .globalStock.kiwoom #footer .notice .service_info {
-    background-color: #f9f9f9;
-    padding-bottom: 28px;
+  background-color: #f9f9f9;
+  padding-bottom: 28px;
 }
+
 #footer .notice .service_info p {
-    font-size: 11px;    
-    line-height: 1.55;    
-    color: #999;
+  font-size: 11px;
+  line-height: 1.55;
+  color: #999;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data {
-    background-color: var(--col05be9e1a);
-    color: var(--col05be9e);
+  background-color: var(--col05be9e1a);
+  color: var(--col05be9e);
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock span {
-    background-color: var(--col08be9e);
-    color: #fff;
+  background-color: var(--col08be9e);
+  color: #fff;
 }
+
 .globalStock .cho_applybtn .btn.btn_apply {
-    background-color: var(--col08be9e);
-    color: #fff;
+  position: relative;
+  background-color: var(--col08be9e);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: normal !important;
 }
+
 .globalStock .cho_applybtn .btn.btn_apply i {
-    background-image: none;
+  background: none;
+  display: inline-block;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  right: calc(50% - 116px);    
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .charm_ranking span {
-    color: var(--col04be9e);
+  color: var(--col04be9e);
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation span {
-    font-size: 12px;    
-    color: var(--col05be9e);
+  font-size: 12px;
+  color: #000;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action,
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .no_data+.line .g_action,
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .prm_lock+.line .g_action {
-    top: -3px;
-    width: 10px;
-    height: 10px;
-    background-color: #fff;        
+  top: -3px;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  box-sizing: border-box;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .g_action::after {
-    width: 6px;
-    height: 6px;
-    background-color: #485777;
+  left: 1px;
+  top: 1px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
 }
 
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation {
-    top: -29px;    
+  top: -21px;
 }
-.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {    
-    width: 14px;    
-    height: 10px;
-    border-radius: 0;
-    background: url('../img/arrow_sct.svg') no-repeat center center;    
+
+.globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation::after {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  top: 17px;
+  border: 2px solid #fff;  
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line .situation.over {
-    right: 0;
+  right: 0;
 }
 
 
 /* 지금살까 */
 .globalStock .sub_search .adequateArea {
-    position: relative;
-	padding: 0 16px;
-	padding-top: 20px;
+  position: relative;
+  padding: 0 20px;
+  padding-top: 20px;
 }
 
 .globalStock .sub_search .adequateArea .title {
-	font-size: 1.25rem;
-	font-weight: 700;
-	line-height: 1.2;
-	color: #181f29;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #181f29;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: flex-start;
-	gap: 25px 20px;
-	margin-top: 16px;
-	padding: 20px 20px;
-	box-sizing: border-box;
-	border-radius: 16px;
-	background-color: #f7f8f9;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px 20px;
+  margin-top: 16px;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #f7f8f9;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num {
-	flex: 1;
-	position: relative;
+  flex: 1;
+  position: relative;
 }
 
 @media (min-width: 426px) {
-	.globalStock .sub_search .adequateArea .listWrap .mid .charm_num {
-		flex: 2;
-	}
+  .globalStock .sub_search .adequateArea .listWrap .mid .charm_num {
+    flex: 2;
+  }
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal {
-	flex: 1;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	margin: 0 auto;
-	flex-basis: 65px;
-	width: 65px;
-	height: 65px;
-	box-sizing: border-box;
-	font-size: 1.25rem;
-	font-weight: bold;
-	line-height: 1.25;
-	text-align: center;
-	color: #333;
-	background-color: #fff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  flex-basis: 65px;
+  width: 65px;
+  height: 65px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.hold {
-	/* 보유 */
-	color: #333;
+  /* 보유 */
+  color: #333;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.buy {
-	/* 매수 */
-	color: #E1305A;
+  /* 매수 */
+  color: #E1305A;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.sell {
-	/* 매도 */
-	color: #404FC3;
+  /* 매도 */
+  color: #404FC3;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal.waitting {
-	/* 관망 */
-	color: #6A727B;
+  /* 관망 */
+  color: #6A727B;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal_guide {
-	cursor: pointer;
-	position: absolute;
-	right: -5px;
-	top: -5px;
-	padding: 5px;
-	display: inline-block;
-	border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 50%;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .charm_num .signal_guide img {
-	display: block;
+  display: block;
 }
 
 .globalStock .sub_search .adequateArea .listWrap .mid .num_bar {
-    flex: 2;
-    flex-basis: calc(100% - 85px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    height: 18px;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .th {
-    font-size: 13px;    
-    line-height: 1.46;
-    text-align: right;
-    color: #888;
-    min-width: 76px;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {    
-    /* position: relative;
+  flex: 2;
+  flex-basis: calc(100% - 85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  height: 18px;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .th {
+  font-size: 13px;
+  line-height: 1.46;
+  text-align: right;
+  color: #888;
+  min-width: 76px;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {
+  /* position: relative;
     width: 100%;
     height: 10px;
     border-radius: 10px;
     background-color: #fff; */
-  }
-
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {
-    flex: 2;
-    width: 100%;
-  }
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline {
-    position: relative;
-    width: 100%;
-    height: 10px;
-    border-radius: 10px;
-    background-color: #fff;
-  }
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline .position {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: inline-block;    
-    border-radius: 10px;
-    height: 100%;
-    width: 0;    
-    max-width: 100%;
-  }  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(1) .barArea .barline .position {
-    background-color: #08be9e;
-  }
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .barArea .barline .position {
-    background-color: #485777;
-  }
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .barArea .barline .position {
-    background-color: #d3d3d3;
-  }
-
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td,
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td b {
-    font-size: 13px;
-    font-weight: bold;    
-    line-height: 1.85;        
-    color: #333;    
-  }
-
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-bar {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    border-radius: 20px;
-    background-color: #e6e7f4;
-  }
-  
-  @keyframes move-dot {
-    from {
-      left: 0;
-    }
-  }
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #0080FF;
-    will-change: transform;
-    animation-name: move-dot;
-    animation-duration: 0.7s;
-    /* 애니메이션 지속시간 */
-    animation-fill-mode: forwards;
-    /* 애니메이션 종료 후 마지막 상태를 유지 */
-    animation-timing-function: ease;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot::after {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    display: inline-block;
-    background: #fff;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    font-size: 0;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .score-dot {
-    background-color: #1E90FF;
-  }
-  
-  .globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .score-dot {
-    background-color: #00BFFF;
-  }
-  
-  
-  .modalBox .modal.tooltip_pop .pop_header {
-    background-color: #fff;
-    padding: 24px 15px;
-    border: none;
-  }
-  .modalBox .modal.tooltip_pop .pop_header .pop_title {
-    justify-content: center;
-    font-size: 1.25rem;
-    line-height: 1.14;
-    font-weight: bold;
-    color: #333;
-    box-sizing: border-box;
-  }
-  .modalBox .modal.tooltip_pop .pop_header .clse::before,
-  .modalBox .modal.tooltip_pop .pop_header .clse::after {
-    width: 2px;
-    background-color: #333;
-  }
-  .modalBox .modal.tooltip_pop .pop_con {
-    padding: 0 16px 25px;
-  }
-  .modalBox .modal.tooltip_pop .pop_con .txt {
-    display: block;
-    padding-bottom: 7px;
-    font-size: 15px;
-    line-height: 1.62;
-    color: #656d7e;
-    word-break: break-all;
-    word-wrap: break-word;
-  }
-  .modalBox .modal.tooltip_pop.btm {
-    margin: 0 auto;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    border-radius: 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-  }
-  .modalBox .modal.tooltip_pop.btm .pop_header {
-    border-bottom: none;
-  }
-  .modalBox .modal.tooltip_pop03, .modalBox .modal.tooltip_pop04 {
-    top: 15%;
-  }
-  .modalBox .modal.tooltip_pop03 .pop_con .sum_txt, .modalBox .modal.tooltip_pop04 .pop_con .sum_txt {
-    font-size: 0.9375rem;
-    line-height: 1.43;
-    color: #6A727B;
-    letter-spacing: normal;
-    padding-bottom: 7px;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-  .modalBox .modal.tooltip_pop03 .pop_con .txt, .modalBox .modal.tooltip_pop04 .pop_con .txt {
-    position: relative;
-    font-size: 0.9375rem;
-    line-height: 1.43;
-    color: #656d7e;
-    letter-spacing: normal;
-    padding-left: 9px;
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-  .modalBox .modal.tooltip_pop03 .pop_con .txt::before, .modalBox .modal.tooltip_pop04 .pop_con .txt::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 9px;
-    background-color: #898989;
-    width: 2px;
-    height: 2px;
-  }
-  .table_btmarea {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px 12px;
-    margin: 15px 0;    
-    padding: 0 16px;
-  }
-  .table_btmarea .txt {
-    display: flex;
-    align-items: center;
-    gap: 0 5px;
-    font-size: 13px;    
-    line-height: 1.46;    
-    text-align: left;
-    color: #888;
-  }
-  .table_btmarea .txt::before {
-    content: '';
-    display: inline-block;
-    background: url('../img/icon_awesome_new.svg') no-repeat center center;
-    width: 14px;
-    height: 14px;
-  }
-  .table_btmarea .more {
-    font-size: 13px;        
-    text-align: right;
-    text-decoration: underline;
-    color: #333;
-  }
-  .table_btmarea .more i {
-    display: inline-block;
-    width: 12px;    
-    height: 12px;
-    font-weight: bold;
-    color: #8c90ad;
-    background: url('../img/more_blue.svg') no-repeat right center;
-  }
-
-  .globalStock .sub_search .sub_mid.outline_box {
-    margin-top: 40px;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .charmNum_box {
-    padding-bottom: 0;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .con {
-    height: auto;
-    min-height: 113px;    
-    align-content: flex-start;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box:not(:has(.event_attractiveness)) .con {                          
-    align-content: normal;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .competitors span.list {
-    font-size: 12px;
-    padding: 4px 6px;
-    background-color: var(--col05be9e1a);
-    color: var(--col05be9e);
-    border-radius: 4px;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on {
-    background: none;
-    font-weight: normal;
-    padding-top: 5px;    
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on a {
-    font-size: 12px;
-    padding: 4px 6px;
-    background-color: var(--col05be9e1a);
-    color: var(--col05be9e);
-    border-radius: 4px;
-    box-sizing: border-box;
-  }  
-  .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness {
-    background: none;
-  }
-  .globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness ul {
-    margin-left: auto;    
-  }
-  
-  .globalStock .sub_search .sub_mid.outline_box .box .title,
-  .globalStock .sub_search .sub_mid.outline_box .box .title span,
-  .globalStock .sub_search .sub_mid.outline_box .box .title a {
-    font-size: 13px;
-    font-weight: bold;    
-    color: #333;
 }
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea {
+  flex: 2;
+  width: 100%;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .barArea .barline .position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  border-radius: 10px;
+  height: 100%;
+  width: 0;
+  max-width: 100%;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(1) .barArea .barline .position {
+  background-color: #00BFAB;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .barArea .barline .position {
+  background-color: #5053E4;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .barArea .barline .position {
+  background-color: #2D3664;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td,
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .td b {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.85;
+  color: #333;
+}
+
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-container {
+  position: relative;
+  width: 100%;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: #e6e7f4;
+}
+
+@keyframes move-dot {
+  from {
+    left: 0;
+  }
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0080FF;
+  will-change: transform;
+  animation-name: move-dot;
+  animation-duration: 0.7s;
+  /* 애니메이션 지속시간 */
+  animation-fill-mode: forwards;
+  /* 애니메이션 종료 후 마지막 상태를 유지 */
+  animation-timing-function: ease;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line .score-dot::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: inline-block;
+  background: #fff;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(2) .score-dot {
+  background-color: #1E90FF;
+}
+
+.globalStock .sub_search .adequateArea .listWrap .mid .num_bar .line:nth-child(3) .score-dot {
+  background-color: #00BFFF;
+}
+
+
+.modalBox .modal.tooltip_pop .pop_header {
+  background-color: #fff;
+  padding: 24px 15px;
+  border: none;
+}
+
+.modalBox .modal.tooltip_pop .pop_header .pop_title {
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1.14;
+  font-weight: bold;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.modalBox .modal.tooltip_pop .pop_header .clse::before,
+.modalBox .modal.tooltip_pop .pop_header .clse::after {
+  width: 2px;
+  background-color: #333;
+}
+
+.modalBox .modal.tooltip_pop .pop_con {
+  padding: 0 16px 25px;
+}
+
+.modalBox .modal.tooltip_pop .pop_con .txt {
+  display: block;
+  padding-bottom: 7px;
+  font-size: 15px;
+  line-height: 1.62;
+  color: #656d7e;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.modalBox .modal.tooltip_pop.btm {
+  margin: 0 auto;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+}
+
+.modalBox .modal.tooltip_pop.btm .pop_header {
+  border-bottom: none;
+}
+
+.modalBox .modal.tooltip_pop03,
+.modalBox .modal.tooltip_pop04 {
+  top: 15%;
+}
+
+.modalBox .modal.tooltip_pop03 .pop_con .sum_txt,
+.modalBox .modal.tooltip_pop04 .pop_con .sum_txt {
+  font-size: 0.9375rem;
+  line-height: 1.43;
+  color: #6A727B;
+  letter-spacing: normal;
+  padding-bottom: 7px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.modalBox .modal.tooltip_pop03 .pop_con .txt,
+.modalBox .modal.tooltip_pop04 .pop_con .txt {
+  position: relative;
+  font-size: 0.9375rem;
+  line-height: 1.43;
+  color: #656d7e;
+  letter-spacing: normal;
+  padding-left: 9px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.modalBox .modal.tooltip_pop03 .pop_con .txt::before,
+.modalBox .modal.tooltip_pop04 .pop_con .txt::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  background-color: #898989;
+  width: 2px;
+  height: 2px;
+}
+
+.table_btmarea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 12px;
+  margin: 15px 0;
+  padding: 0 20px;
+}
+
+.table_btmarea .txt {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+  font-size: 13px;
+  line-height: 1.46;
+  text-align: left;
+  color: #888;
+}
+
+.table_btmarea .txt::before {
+  content: '';
+  display: inline-block;
+  background: url('../img/icon_awesome_new.svg') no-repeat center center;
+  width: 14px;
+  height: 14px;
+}
+
+.table_btmarea .more {
+  font-size: 13px;
+  text-align: right;
+  text-decoration: underline;
+  color: #333;
+}
+
+.table_btmarea .more i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  font-weight: bold;
+  color: #8c90ad;
+  background: url('../img/more_dark.svg') no-repeat right 4px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box {
+  margin-top: 40px;
+  width: calc(100% - 40px);
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .charmNum_box {
+  padding: 15px 0px 0;
+  padding-bottom: 0;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .con {
+  height: auto;
+  min-height: 113px;
+  align-content: flex-start;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box:not(:has(.event_attractiveness)) .con {
+  align-content: normal;
+  justify-content: flex-start;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .competitors span.list {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 6px;
+  background-color: var(--col05be9e1a);
+  color: var(--col05be9e);
+  border-radius: 4px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on {
+  background: none;
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness li.att_on a {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 6px;
+  background-color: var(--col05be9e1a);
+  color: var(--col05be9e);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness {
+  background: none;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .event_attractiveness ul {
+  margin-left: auto;
+}
+
+.globalStock .sub_search .sub_mid.outline_box .box .title,
 .globalStock .sub_search .sub_mid.outline_box .box .title span,
 .globalStock .sub_search .sub_mid.outline_box .box .title a {
-    display: flex;   
-    gap: 0 5px;     
-    background: none;    
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
 }
+
+.globalStock .sub_search .sub_mid.outline_box .box .title span,
+.globalStock .sub_search .sub_mid.outline_box .box .title a {
+  display: flex;
+  gap: 0 3px;
+  background: none;
+}
+
 .globalStock .sub_search .sub_mid.outline_box .box .title span::after,
 .globalStock .sub_search .sub_mid.outline_box .box .title a::after {
-    content: '';
-    display: inline-block;
-    background: url('../img/more_blue.svg') no-repeat center center;
-    width: 14px;
-    height: 14px;
+  content: '';
+  display: inline-block;
+  background: url('../img/more_dark.svg') no-repeat center center;
+  width: 14px;
+  height: 14px;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .charmNum_box .charm_average,
 .globalStock .sub_search .sub_mid.outline_box .box .charmNum_box .charm_average b {
-    font-size: 12px;    
-    color: #888;
-    font-weight: normal;
+  font-size: 12px;
+  color: #888;
+  font-weight: normal;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .charm_ranking {
-    font-size: 12px;
-    font-weight: 500;    
-    color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  color: #888;
+  text-align: left;
+  margin-bottom: auto;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate span {
-    font-size: 12px;
-    color: #888;
+  font-size: 12px;
+  color: #888;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .adequate strong {
-    font-size: 14px;    
-    line-height: 0.93;    
-    color: #333;
+  font-size: 14px;
+  line-height: 0.93;
+  color: #333;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .data_attainment ul li {
-    font-size: 12px;    
-    letter-spacing: normal;    
-    color: #888;
+  font-size: 12px;
+  letter-spacing: normal;
+  color: #888;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .data_attainment ul li span,
 .globalStock .sub_search .sub_mid.outline_box .box .data_attainment ul li span b {
-    font-weight: normal;
-    font-size: 14px;    
-    line-height: 0.93;    
-    color: #333;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 0.93;
+  color: #333;
 }
 
 /* Highcharts 라인 색 변경 */
 .containersummary1 .highcharts-series-0 .highcharts-graph {
-    stroke: var(--col05be9e) !important; 
+  stroke: var(--col05be9e) !important;
 }
+
 .containersummary1 .highcharts-axis-line {
-    stroke: #f6f6f6;
+  stroke: #f6f6f6;
 }
+
 .containersummary1 .highcharts-tick {
-    display: none !important;
+  display: none !important;
 }
+
 .containersummary1 .highcharts-axis-labels.highcharts-xaxis-labels text {
-    color: #888 !important; 
-    font-size: 12px !important;
-    fill: #888 !important; 
+  color: #888 !important;
+  font-size: 12px !important;
+  fill: #888 !important;
 }
-.containersummary1 .highcharts-tooltip text tspan:nth-child(2), 
+
+.containersummary1 .highcharts-tooltip text tspan:nth-child(2),
 .containersummary1 .highcharts-tooltip text tspan:nth-child(3) {
-    color: var(--col05be9e) !important; 
-    fill: var(--col05be9e) !important; 
+  color: var(--col05be9e) !important;
+  fill: var(--col05be9e) !important;
 }
+
 .containerfinancials1 .highcharts-point.highcharts-color-0 {
-    fill: #05be9e;
+  fill: #00BFAB;
 }
+
 .containerfinancials1 .highcharts-point.highcharts-color-1 {
-    fill: #545872;
+  fill: #5053E4;
 }
+
 .containerfinancials1 .highcharts-point.highcharts-color-2 {
-    fill: #d3d3d3;
+  fill: #2D3664;
 }
+
 .containerfinancials1 .highcharts-label.highcharts-data-label text {
-    font-size: 8px;    
-    font-weight: normal !important;
-    color: #888 !important;        
-    fill: #888 !important;
+  font-size: 8px;
+  font-weight: normal !important;
+  color: #888 !important;
+  fill: #888 !important;
 }
 
 .containerfinancials1 .highcharts-axis-labels.highcharts-xaxis-labels text {
-    color: #888 !important; 
-    font-size: 14px !important;
-    fill: #888 !important; 
+  color: #888 !important;
+  font-size: 14px !important;
+  fill: #888 !important;
 }
+
 .containerfinancials1 .highcharts-tooltip text tspan:nth-child(1) {
-    color: #888 !important;     
-    fill: #888 !important; 
+  color: #888 !important;
+  fill: #888 !important;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .chart_box .chart_legend li span {
-    font-size: 12px;    
-    letter-spacing: -0.6px;    
-    color: #888;
+  font-size: 12px;
+  letter-spacing: -0.6px;
+  color: #888;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .chart_box .chart_legend li:nth-child(1) span i {
-    background-color: #05be9e;
-    
+  background-color: #00BFAB;
+
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .chart_box .chart_legend li:nth-child(2) span i {
-    background-color: #545872;
+  background-color: #5053E4;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .chart_box .chart_legend li:nth-child(3) span i {
-    background-color: #d3d3d3;    
+  background-color: #2D3664;
 }
 
 .globalStock .sub_search .sub_mid.outline_investCharm .summary {
-    margin-top: 30px;
-    background-color: transparent;
-    padding: 0 6px;
-    font-size: 14px;    
-    line-height: 1.43;    
-    color: #333;
+  margin-top: 30px;
+  background-color: transparent;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #333;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .summary.small {
-    padding: 0 6px;
+  padding: 0 6px;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .summary.small::after {
-    content: '더보기';
-    display: block;
-    position: static;
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border: none;
-    transform: none;    
-    text-align: right;
-    font-size: 13px;        
-    color: #333;
-    text-decoration: underline;
-    background-color: none;
+  content: '더보기';
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: none;
+  transform: none;
+  text-align: right;
+  font-size: 13px;
+  color: #333;
+  text-decoration: underline;
+  background-color: none;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .summary.big::after {
-    content: '닫기';
-    display: block;
-    position: static;
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-    border: none;
-    transform: none;    
-    text-align: right;
-    font-size: 13px;        
-    color: #333;
-    text-decoration: underline;
-    background-color: transparent;
+  content: '닫기';
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  border: none;
+  transform: none;
+  text-align: right;
+  font-size: 13px;
+  color: #333;
+  text-decoration: underline;
+  background-color: transparent;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .summary.big::before {
-    display: none;
+  display: none;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .table_box strong.unit {
-    font-size: 11px;    
-    color: #888;
-    margin-bottom: 8px;
-    letter-spacing: normal !important;
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 8px;
+  letter-spacing: normal !important;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table {
-    width: 100%;
-    margin: 0;
-    border: none;
+  width: 100%;
+  margin: 0;
+  border: none;
 }
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table tr {
-    /* border-top: 1px solid #f6f6f6; */
-    border-bottom: 1px solid #f6f6f6;
+  /* border-top: 1px solid #f6f6f6; */
+  border-bottom: 1px solid #f6f6f6;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table:first-child tr {
-    border-top: 1px solid #f6f6f6;
+  border-top: 1px solid #000;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table.left {
-    float: none;
+  float: none;
 }
+
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table th,
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td {
-    width: 50%;
-    padding: 0 4px;
-    vertical-align: middle;
+  width: 50%;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table th {
+  background-color: #FBFBFB;
 }
 .globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table th span {
-    border: none;
-    padding: 0;
-    vertical-align: middle;
-    font-size: 12px;
-    font-weight: bold;    
-    line-height: 1.33;    
-    color: #333;
+  border: none;
+  padding: 0;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.33;
+  color: #7F7F7F;
 }
-.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td {
-    background-color: #fbfbfb;
-    font-size: 14px;    
-    line-height: 1.14;    
-    text-align: right;
-    color: #333;
-    padding-right: 16px;
+
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td {  
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: right;
+  color: #000;
+  padding-right: 16px;
 }
-.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table td span {
-    display: inline-block;    
-    padding-left: 3px;
-    font-size: 11px;    
-    line-height: 1;    
-    text-align: right;
+
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table tr td span {
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: right;
+  color: #000;
+  opacity: 1;
 }
+
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table:first-child tr:nth-child(1) td span,
+.globalStock .sub_search .sub_mid.outline_investCharm .tableRanking.guide_table:first-child tr:nth-child(2) td span {
+  /* display: inline-block;     */
+  padding-left: 3px;
+  font-size: 11px;
+  line-height: 1;
+  text-align: right;
+}
+
 .globalStock .sub_search .sub_mid.financials_chart .bdr_title .title {
-    font-size: 18px;
-    font-weight: bold;    
-    color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .tabs_menu .unit {
-    font-size: 11px;        
-    color: #888;
+  font-size: 11px;
+  color: #888;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .tabs_menu span {
-    font-size: 12px;    
-    color: #888;
+  font-size: 12px;
+  color: #888;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .tabs_menu span.active {
-    color: #333;
+  color: #333;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .bdr_title .tabs_menu {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
+
 .globalStock .sub_search .sub_mid.financials_chart .bdr_title {
-    border-bottom: none;
+  border-bottom: none;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .value_chart .line {
-    background-color: #fff;
-    height: 4px;
+  background-color: #fff;
+  height: 4px;
 }
+
 .globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip {
-    padding: 20px 0;
+  padding: 20px 0 5px;
+}
+.globalStock .sub_search .sub_mid.outline_investCharm {
+  padding: 0 20px;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip ul li i {
+  background: none;    
+  width: 30px;
+  height: 30px;
+  background-position-x: 0 !important;    
+}
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip ul li i.up {
+  background: url('../img/trans_up.svg') no-repeat center center;
+  background-size: cover;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip ul li i.down {
+  background: url('../img/trans_down.svg') no-repeat center center;
+  background-size: cover;
+}
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip ul li i.trans {
+  background: url('../img/trans_sum.svg') no-repeat center center;  
+  background-size: cover;
 }

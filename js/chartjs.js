@@ -2458,11 +2458,13 @@ $(document).ready(function () {
 
             plotOptions: {
                 series: {
+                    borderRadiusTopLeft: 4,
+                    borderRadiusTopRight: 4,
                     marker: {
                         enabled: false,
                     }
                 },
-                column: {
+                column: {                    
                     minPointLength: 5,
                     dataLabels: {
                         enabled: true,
@@ -2573,6 +2575,8 @@ $(document).ready(function () {
 
             plotOptions: {
                 series: {
+                    borderRadiusTopLeft: 4,
+                    borderRadiusTopRight: 4,
                     marker: {
                         enabled: false,
                     }
@@ -2686,8 +2690,10 @@ $(document).ready(function () {
                 data: [64, 34, 24]
             }],
 
-            plotOptions: {
+            plotOptions: {                
                 series: {
+                    borderRadiusTopLeft: 4,
+                    borderRadiusTopRight: 4,
                     marker: {
                         enabled: false,
                     }
