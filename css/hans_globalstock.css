@@ -846,6 +846,9 @@ body,
 .globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip {
   padding: 20px 0 5px;
 }
+.globalStock .sub_search .sub_mid.outline_box .box .attention_box .game_tip + .charm_ranking {
+  text-align: center;
+}
 .globalStock .sub_search .sub_mid.outline_investCharm {
   padding: 0 20px;
 }
