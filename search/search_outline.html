@@ -493,13 +493,17 @@
 
                 </div>
                 <!-- //tabletabs_wrap -->
-
+                
                 <div class="cho_applybtn">
                     <a href="javascript:fnSinChung();" class="btn btn_apply">이 종목의 AI종목진단 더보기<i></i></a>
                 </div>
 
             </div>
             <!-- //sub_mid -->
+            <div class="fixedLink_btn">
+                <a href="" class="btn btn_apply">초이스스탁 시그널 종목</a>
+                <span class="btn_close"><!--닫기--></span>
+            </div>
         </div>
         <!-- //container -->
 
@@ -543,6 +547,11 @@
 
     <script>
         $(document).ready(function () {
+            // 초이스스탁US 확인하기 버튼 숨김            
+            $('.btn_close').click(function() {
+                $('.fixedLink_btn').hide();
+            });
+
             // 지금살까 모달 팝업        
             $('.globalStock .sub_search .adequateArea .listWrap .mid .charm_num').on('click', function () {
                 $('body').css('overflow', 'hidden');
