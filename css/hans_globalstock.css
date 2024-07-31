@@ -872,13 +872,13 @@ body,
 }
 .globalStock .fixedLink_btn {  
   position: sticky;
-  bottom: 68px;
+  bottom: 60px;
   left: 20px;
   width: 80%;    
-  max-width: 220px;
+  max-width: 244px;
   box-sizing: border-box;
   margin: 0 auto;
-  background-color: #596AFF;
+  background-color: #5A69FF;
   border-radius: 50px;
   z-index: 9999;
   text-align: center;
@@ -895,9 +895,9 @@ body,
   content: "";
   position: absolute;
   right: 9px;
-  top: 0;
+  top: -1px;
   height: 14px;
-  width: 1px;
+  width: 2px;
   background-color: #fff;
 }
 .globalStock .fixedLink_btn .btn_close::after {
@@ -912,9 +912,10 @@ body,
   justify-content: center;
   gap: 0 7px;
   position: relative;    
-  padding: 16px 6px;
+  padding: 14px 6px;
   text-align: center;      
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 0.8175rem;
   color: #fff;
 }
 .globalStock .fixedLink_btn .btn_apply::before {
@@ -922,6 +923,6 @@ body,
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url('../img/icon_fixedLink.png') no-repeat center center;
+  background: url('../img/icon_fixedLink.svg') no-repeat center center;
   background-size: cover;
 }
